@@ -1,4 +1,4 @@
-# Day 3 – To-Do List Application ✅
+# To-Do List Application ✅
 
 ## Description
 A command-line based To-Do List application built using Python. It allows users to manage daily tasks efficiently.
