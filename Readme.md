@@ -17,6 +17,9 @@ A command-line based To-Do List application built using Python. It allows users 
 - Conditional statements
 - Input validation
 
+## Additional Feature
+- Tasks are saved to a JSON file and automatically loaded when the application restarts.
+
 ## How to Run
 1. Install Python 3
 2. Run:
