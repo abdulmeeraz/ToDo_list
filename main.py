@@ -1,3 +1,18 @@
+
+import os
+import json
+
+def load_task(filename = "tasks.json"):
+    if os.path.exists(filename):
+        with open(filename,"r") as file:
+            return json.load(file)
+    return[]
+
+def save_task(tasks,filename = "tasks.json"):
+    with open(filename,"w") as file:
+        json.dump(tasks,file,indent=4)
+
+
 def show_menu():
     print("\n====== TO-DO LIST ======")
     print("1. Add Task")
@@ -10,6 +25,7 @@ def show_menu():
 def add_task(tasks):
     task = input("Enter task description: ")
     tasks.append({"task": task, "completed": False})
+    save_task(tasks)
     print("Task added successfully!")
 
 
@@ -21,6 +37,7 @@ def view_tasks(tasks):
     print("\n--- Your Tasks ---")
     for i, task in enumerate(tasks, start=1):
         status = "✔" if task["completed"] else "✘"
+        save_task(tasks)
         print(f"{i}. {task['task']} [{status}]")
 
 
@@ -49,6 +66,7 @@ def delete_task(tasks):
         index = int(input("Enter task number to delete: "))
         if 1 <= index <= len(tasks):
             removed = tasks.pop(index - 1)
+            save_task(tasks)
             print(f"Task '{removed['task']}' deleted successfully!")
         else:
             print("Invalid task number.")
@@ -57,7 +75,7 @@ def delete_task(tasks):
 
 
 def todo_app():
-    tasks = []
+    tasks = load_task()
 
     while True:
         show_menu()
