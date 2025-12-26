@@ -19,6 +19,9 @@ A command-line based To-Do List application built using Python. It allows users 
 
 ## Additional Feature
 - Tasks are saved to a JSON file and automatically loaded when the application restarts.
+- Supports persistent task storage using JSON files
+- Allows editing existing tasks
+
 
 ## How to Run
 1. Install Python 3
