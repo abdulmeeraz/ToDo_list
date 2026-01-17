@@ -3,4 +3,8 @@
         "task": "Want to go for a walk at 8 PM.",
         "completed": true
     }
+    {
+        "task": "Take a head bath for every Friday and Wednesday",
+        "completed": false
+    }
 ]
