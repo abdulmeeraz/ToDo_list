@@ -7,4 +7,8 @@
         "task": "Take a head bath for every Friday and Wednesday",
         "completed": false
     }
+    {
+        "task": "learn something everyday.",
+        "completed": false 
+    }
 ]
